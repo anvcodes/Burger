@@ -9,13 +9,13 @@ var burger = {
     });
   },
   // The variables cols and vals are arrays.
-  insertOne: function(colmn, values, cb) {
-    orm.insertOne("burgers", colmn, values, function(res) {
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne("burgers", cols, vals, function(res) {
       cb(res);
     });
   },
-  updateOne: function(colValObj, condition, cb) {
-    orm.updateOne("burgers", colValObj, condition, function(res) {
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);
     });
   }
